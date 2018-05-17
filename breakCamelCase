@@ -1,0 +1,19 @@
+/*the function will break up camel casing, using a space between words.
+
+Example
+solution('camelCasing') // => should return 'camel Casing'*/
+// complete the function
+function solution(string) {
+  let array=Array.from(string)
+  let stringing=""
+  for(let i = 0; i<string.length; i++) {
+    if (array[i] == array[i].toUpperCase()){
+     stringing=stringing+ " " + array[i]
+    }
+    else {
+      stringing=stringing+ array[i];
+    }
+  }
+  console.log(stringing)
+  return(stringing)
+}

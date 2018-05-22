@@ -1,0 +1,7 @@
+const reverseSeq = n => {
+  let example = []
+  for (let i=0; i<n; n--){
+   example.push(n);
+  }
+  return (example);
+};

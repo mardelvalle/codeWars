@@ -1,0 +1,27 @@
+I have a cat and a dog.
+
+I got them at the same time as kitten/puppy. That was humanYears years ago.
+
+Return their respective ages now as [humanYears,catYears,dogYears]
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+  // Your code here!
+  let cat=0;
+  let dog=0;
+  let human=humanYears;
+  for(let i=0; i<humanYears; humanYears--){
+    if (humanYears==1){
+      cat=cat+15;
+      dog=dog+15;
+    }
+    else if (humanYears==2){
+      cat=cat+9;
+      dog=dog+9;
+    }
+    else{
+      cat=cat+4;
+      dog=dog+5;
+    }
+  }
+  return [human,cat,dog];
+}

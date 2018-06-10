@@ -1,0 +1,11 @@
+Welcome. In this kata, you are asked to square every digit of a number.
+function squareDigits(num){
+  //may the code be with you
+  let value = num.toString()
+  let from = Array.from(value)
+  let parser = from.map(Number)
+  for (let e = 0; e < parser.length; e++) {
+    parser[e] = parser[e] * parser[e]
+  }
+  return (parseInt(parser.join("")))
+}

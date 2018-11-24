@@ -1,0 +1,18 @@
+//return the total number of smiling faces in the array
+function countSmileys(arr) {
+let track = 0;
+let ind;
+  for(let i = 0; i< arr.length; i++){
+  //console.log(arr[i].)
+    ind = arr[i];
+    if ((((ind.charAt(ind.length-1) == 'D')) || ((ind.charAt(ind.length-1) == ')'))) && ind.length < 4){
+          if (((ind.charAt(0) == ':') || (ind.charAt(0) == ';'))){
+              if (ind.charAt(1) == 'D' || ind.charAt(1) == ')' || ind.charAt(1) == '~' || ind.charAt(1) == '-'){
+                console.log(ind)
+                track++;
+              }
+          }
+    }
+  }
+  return track;
+}

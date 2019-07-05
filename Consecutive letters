@@ -1,0 +1,18 @@
+In this Kata, we will check if a string contains consecutive letters as they appear in the English alphabet and if each letter occurs only once.
+function solve(s){
+    //..
+  let al = ("abcdefghijklmnopqrstuvwxyz").split("")
+  for( let u = 0; u < al.length; u++) {
+
+    if(al[u] === s[0].toLowerCase()) {
+      for(let c = 0; c < s.length; c++) {
+      console.log(s[c+1])
+      console.log(al[u+1+c])
+        if ((s[c].toLowerCase() !== al[u+c]) || ((c != 0) && (s[c-1].toLowerCase() != al[u-1+c]))) {
+          return false
+        }
+      }
+      return true
+    }
+  }
+}

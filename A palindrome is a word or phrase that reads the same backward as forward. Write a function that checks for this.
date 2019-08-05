@@ -1,0 +1,26 @@
+isAPalindrone = (enteredWord) => {
+  let testWord = enteredWord.split("")
+  while(testWord.length >= 0) {
+    if(testWord.length === (0||1) ) {
+      console.log("ww")
+      return true
+    }
+    else {
+      if(testWord[0] === testWord[testWord.length-1]) {
+        testWord.shift()
+        testWord.pop()
+      }
+      else {
+        console.log("hit")
+        return false
+      }
+    }
+  }
+}
+
+
+
+
+isAPalindrone("leon noel")
+isAPalindrone("")
+isAPalindrone("hello my baby")

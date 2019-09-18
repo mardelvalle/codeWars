@@ -1,0 +1,16 @@
+function roundround(arra, sides, rotate) {
+  let array = arra.map(x => x+rotate)
+  console.log(arra)
+  console.log(array)
+  array = array.map(function(x){
+    if(sides<= x) {
+      console.log(x%sides)
+      return x% sides +1
+    }
+    else {
+      return x
+    }
+  })
+  console.log(array)
+  return array
+}

@@ -20,10 +20,10 @@ function length(head) {
 function count(head, data) {
   let count = 0
   while(head) {
-    if(count === data) {
+    if(head.data === data) {
       count++
     }
-    head.next
+    head = head.next
   }
   return count
 }

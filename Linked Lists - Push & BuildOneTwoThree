@@ -1,7 +1,7 @@
 
-Linked Lists - Push & BuildOneTwoThree
+#Linked Lists - Push & BuildOneTwoThree
 
-Write push() and buildOneTwoThree() functions to easily update and initialize linked lists. Try to use the push() function within your buildOneTwoThree() function.
+#Write push() and buildOneTwoThree() functions to easily update and initialize linked lists. Try to use the push() function within your buildOneTwoThree() function.
 
 Here's an example of push() usage:
 function Node(data) {

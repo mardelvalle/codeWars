@@ -1,0 +1,29 @@
+#https://www.codewars.com/kata/55beec7dd347078289000021/train/javascript
+
+#Linked Lists - Length & Count
+
+#Implement Length() to count the number of nodes in a linked list.
+function Node(data) {
+  this.data = data;
+  this.next = null;
+}
+
+function length(head) {
+  let count = 0
+  while(head) {
+    count++
+    head = head.next
+  }
+  return count
+}
+
+function count(head, data) {
+  let count = 0
+  while(head) {
+    if(count === data) {
+      count++
+    }
+    head.next
+  }
+  return count
+}

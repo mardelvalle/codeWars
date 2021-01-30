@@ -1,0 +1,19 @@
+https://www.codewars.com/kata/52223df9e8f98c7aa7000062/train/javascript
+
+function rot13(str) {
+  const letters = ["n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"]
+  let answer = []
+  for (let i = 0; i < str.length; i++) {
+    let code = str.charCodeAt(i)
+    if(code >= 97 && code <= 122) {
+      answer.push(letters[code-97])
+    }
+    else if(code >= 65 && code <= 90) {
+      answer.push(letters[code-65].toUpperCase())
+    }
+    else {
+      answer.push(str[i])
+    }
+  }
+  return answer.join('')
+}

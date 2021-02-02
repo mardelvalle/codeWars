@@ -1,0 +1,31 @@
+class Queue{
+  constructor() {
+    this.data = {}
+    this.head = 0
+    this.tail = 0
+  }
+  
+  enqueue(element) {
+    this.data[this.tail] = element
+    this.tail++
+  }
+  dequeue() {
+    delete this.data[this.head]
+    this.head++
+  }
+  getLast(){
+    return this.data[this.data.length-1]
+  }
+  getFirst() {
+    return this.data[0]
+  }
+  size() {
+    return this.data.length
+  }
+}
+
+const q = new Queue()
+q.enqueue('ex')
+q.enqueue('exx')
+q.enqueue('exxx')
+console.log('dequeue', Q.dequeue())

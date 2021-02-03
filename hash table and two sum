@@ -1,0 +1,62 @@
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+var twoSum = function(nums, target) {
+    if (nums.length === 0) return nums
+    
+    const previousValues = {}
+    let i = 0
+    while(i < nums.length) {
+        const num = nums[i]
+        if (num in previousValues)  {
+            return [previousValues[num], i]
+        }
+        previousValues[target-num] = i
+        i++
+    }
+    return []
+};
+
+
+class HashTable {
+  constructor() {
+    this.values = {};
+    this.length =  0;
+    this.size =  0;
+  }
+
+  calculateHash(key) {
+    return key.toString().length % this.size;
+  }
+
+  add(key, value) {
+    const hash = this.calculateHash(key);
+    if (!this.values.hasOwnProperty(hash)) {
+      this.values[hash] = {}
+    }
+    if (!this.values[hash].hasOwnProperty(key)) {
+       this.length++
+    }
+    this.values[hash][key] = value
+  }
+  
+   remove(key) {
+    const index = hash(key, this.size)
+    const deleted = this.values[index].get(key)
+    this.values[index].delete(key)
+  }
+
+  search(key) {
+     const hash = this.calculateHash(key)
+     if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+       return this.values[hash][key]
+  }
+}
+
+const h = new HashTable()
+h.add("Canada", "300")
+h.add("Germany", "100")
+h.add("Italy", "50")

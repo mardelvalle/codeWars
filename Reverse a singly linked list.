@@ -1,0 +1,14 @@
+https://leetcode.com/problems/reverse-linked-list/
+Reverse a singly linked list.
+
+
+var reverseList = function(head) {
+    let previous = null
+    while(head) {
+        let hold = head
+        head = head.next
+        hold.next = previous
+        previous = hold
+    }
+    return previous
+}

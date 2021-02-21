@@ -1,0 +1,8 @@
+function minSum(arr) {
+  let sorted = arr.sort((c, d) => c-d)
+  let result = 0
+  for(let i=0; i < sorted.length/2; i++) {
+    result += sorted[i] * sorted[sorted.length-1-i]
+  }
+  return result 
+}

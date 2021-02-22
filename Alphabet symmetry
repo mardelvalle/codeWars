@@ -1,0 +1,17 @@
+https://www.codewars.com/kata/59d9ff9f7905dfeed50000b0
+
+function solve(arr){  
+  let result = []
+  for(let i = 0; i < arr.length; i++) {
+    let count = 0
+    for(let e = 0; e < arr[i].length; e++) {
+      let currentLetter = arr[i][e].toLowerCase()
+       if(currentLetter.charCodeAt(0) - 97 === e) {
+         count++
+       }
+    }
+    result.push(count)
+    count = 0
+  }
+  return result
+};

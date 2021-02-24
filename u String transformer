@@ -1,0 +1,44 @@
+https://www.codewars.com/kata/5878520d52628a092f0002d0/train/javascript
+function stringTransformer(str) {
+  // Your code here
+  let array = []
+  for(let a=0; a<str.length; a++) {
+    if(str[a] === " ") {
+      array.push("")
+    }
+    else if(a === 0) {
+      if(str[a] === str[a].toUpperCase()) {           
+         array = [str[a].toLowerCase()]   
+      }
+     else {
+       console.log("sd")
+         array = [str[a].toUpperCase()]
+      }
+    }
+    else if(str[a] === str[a].toUpperCase()) {     
+      array[array.length-1] = `${array[array.length-1]}${str[a].toLowerCase()}`
+    }
+    else {
+      array[array.length-1] = `${array[array.length-1]}${str[a].toUpperCase()}`
+    }
+  }
+  let newString = array.reverse().join(" ")
+  let arrayString = str.split("")
+  for(let i= 0; i < arrayString.lengh; i++) {
+    if(array[i] === " ") {
+      newString = ` ${newString}`
+    }
+    else {
+      break
+    }
+  }
+  for(let w = arrayString.length-1; w >= 0; w--) {
+    if(arrayString[w] === " ") {
+      newString = `${newString} `
+    }
+    else {
+      break
+    }
+  }
+  return newString
+}

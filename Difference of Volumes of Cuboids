@@ -1,0 +1,7 @@
+https://www.codewars.com/kata/58cb43f4256836ed95000f97
+
+function findDifference(a, b) {
+  return Math.abs(a.reduce(reducer) - b.reduce(reducer))
+}
+
+let reducer = (c,d) => c*d

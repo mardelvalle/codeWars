@@ -1,0 +1,14 @@
+https://www.codewars.com/kata/5ab363ff6a176b29880000dd
+Complete the function that accepts a valid string and returns an integer.
+
+Wait, that would be too easy! Every character of the string should be converted to the hex value of its ascii code, then the result should be the sum of the numbers in the hex strings (ignore letters).
+
+function hexHash(code){
+   let result = '';
+    for (var i=0; i<code.length; i++) {
+      result += code.charCodeAt(i).toString(16);
+    }
+    let arr = result.split("")
+    const arr1=arr.filter(f => f.charCodeAt(0) >= 48 && f.charCodeAt(0) <= 57)
+   return arr1.reduce((e, r)=> e + Number(r), 0)
+  }

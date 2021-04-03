@@ -1,0 +1,5 @@
+https://www.codewars.com/kata/5896616336c4bad1c50000d7
+function annulusArea(a) {
+  // your code
+  return Number(((Math.PI * (a * a)) / 4.0).toFixed(2));
+}

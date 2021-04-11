@@ -1,0 +1,16 @@
+https://www.codewars.com/kata/554b4ac871d6813a03000035
+function highAndLow(numbers){
+  let l = numbers.split(" ")
+  let mi = parseInt(l[0])
+  let ma = parseInt(l[0])
+  for(let i = 1; i < l.length; i++) {
+    let v = parseInt(l[i])
+    if(v > ma) {
+      ma=v
+    }
+    else if(v < mi) {
+      mi = v
+    }
+  }
+  return(`${ma} ${mi}`)
+}

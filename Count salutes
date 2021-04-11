@@ -1,0 +1,24 @@
+function countSalutes(hallway) {
+  let count = 0
+  let h = hallway.split("")
+  let newArray = []
+  for(let b = 0; b < h.length; b++) {
+    if(h[b] === '<' || h[b] === ">") {
+      newArray.push(h[b])
+    }
+  }
+  for(let a =0; a < newArray.length; a++) {
+    if(newArray[a] === ">") {
+      console.log("s")
+      console.log(newArray[a+1], newArray.length)
+      for(let c = a+1; c < newArray.length; c++) {
+        console.log(newArray[c])
+        if(newArray[c] === "<") {
+          count += 2
+        }
+      }
+    }
+  }
+  return count
+}
+https://www.codewars.com/kata/605ae9e1d2be8a0023b494ed

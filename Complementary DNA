@@ -1,0 +1,25 @@
+function DNAStrand(dna){
+  //your code here
+  let result = ''
+  const array = dna.split("")
+  for(let i = 0; i < array.length; i++) {
+  switch(array[i]) {
+  case 'A':
+    result+="T"
+      break
+  case 'T':
+    result+="A"
+      break
+  case 'C':
+    result+="G"
+      break
+  case 'G':
+    result+="C"
+      break
+  default:
+    result+=array[i]
+}
+  }
+  return(result)
+}
+https://www.codewars.com/kata/554e4a2f232cdd87d9000038

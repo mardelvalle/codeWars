@@ -1,0 +1,7 @@
+function boxCapacity(length, width, height) {
+  const aLength = Math.floor((length * 12)/16)
+  const aWidth = Math.floor((height * 12)/16)
+  const aHeight = Math.floor((width * 12)/16)
+  return aLength * aWidth * aHeight; //code here
+}
+https://www.codewars.com/kata/5862e7c63f8628a126000e18

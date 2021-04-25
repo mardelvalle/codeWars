@@ -1,0 +1,18 @@
+function nbDig(n, d) {
+    // your code
+  let thing = ''
+  let count =0
+  while(count <= n) {
+    thing += (count**2).toString()
+    count++
+  }
+  let ar = thing.split("")
+  let finalCountdown = 0
+  for(let i = 0; i < ar.length; i++) {
+    if(ar[i] == d) {
+      finalCountdown++
+    }
+  }
+  return finalCountdown
+}
+https://www.codewars.com/kata/566fc12495810954b1000030

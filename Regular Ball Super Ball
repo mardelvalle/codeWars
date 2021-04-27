@@ -1,0 +1,10 @@
+var Ball = function(ballType) {
+  // your code goes here
+  if(ballType) {
+    this.ballType = "super"
+  } else {
+    this.ballType = "regular"
+  }
+};
+
+https://www.codewars.com/kata/53f0f358b9cb376eca001079

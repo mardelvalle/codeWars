@@ -1,0 +1,15 @@
+function fakeBin(x){
+let array = x.split("")
+let result = ""
+for(let i of array) {
+  if(parseInt(i) < 5) {
+    result += "0"
+  }
+  else if(parseInt(i) > 4) {
+    result += "1"
+  }
+}
+  return result
+}
+
+https://www.codewars.com/kata/57eae65a4321032ce000002d

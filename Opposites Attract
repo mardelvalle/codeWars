@@ -1,0 +1,5 @@
+function lovefunc(flower1, flower2){
+  let flower11 = flower1 % 2
+  let flower22 = flower2 % 2
+  return flower22 === flower11 ? false : true
+}https://www.codewars.com/kata/555086d53eac039a2a000083

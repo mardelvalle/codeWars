@@ -1,0 +1,14 @@
+function getAge(inputString){
+// return correct age (int). Happy coding :) 
+  let st  = inputString.split("")
+  let result = ""
+  for(let t = 0; t < st.length; t++) {
+    if(parseInt(st[t])) {
+      result += st[t]
+    } else {
+     return parseInt(result)
+    }
+  }
+  return parseInt(result)
+}
+https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1

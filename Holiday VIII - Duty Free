@@ -1,0 +1,6 @@
+https://www.codewars.com/kata/57e92e91b63b6cbac20001e5
+function dutyFree(normPrice, discount, hol){
+ let d = discount/100
+ let e = normPrice * d
+ return Math.floor(hol/e)
+}

@@ -1,0 +1,2 @@
+def approx_equals(a, b):
+    return (a <= 0.001 + b) and (a >=  b - 0.001)
